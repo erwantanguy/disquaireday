@@ -1,0 +1,956 @@
+/******************************************************************
+Theme Name: Disquaire Day
+Theme URI: http://disquaireday.fr/
+Description: Thème basé sur bootstrap pour DRM Galerie
+Author: Erwan & Rozenn Tanguy - Ticoët
+Author URI: http://www.ticoet.fr/
+Version: 1.0
+*********************************************************************/
+
+
+@import url(https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
+@import url(css/bootstrap.min.css);
+@import url(css/font-awesome.min.css);
+
+
+@font-face {
+    font-family: 'axisbold';
+    src: url('fonts/axis-webfont.eot');
+    src: url('fonts/axis-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/axis-webfont.woff2') format('woff2'),
+         url('fonts/axis-webfont.woff') format('woff'),
+         url('fonts/axis-webfont.ttf') format('truetype'),
+         url('fonts/axis-webfont.svg#axisbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'embossing';
+    src: url('fonts/embosst1-webfont.eot');
+    src: url('fonts/embosst1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/embosst1-webfont.woff2') format('woff2'),
+         url('fonts/embosst1-webfont.woff') format('woff'),
+         url('fonts/embosst1-webfont.ttf') format('truetype'),
+         url('fonts/embosst1-webfont.svg#embossing_tape_1_brkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*[class*="col-"]{
+	
+}
+
+
+body{
+	font-family:'Gill sans', Arial, Helvetica, sans-serif;
+	/*background-color: rgba(253, 231, 171,.5);*//*rgba(211, 18, 25,.08)*/
+    background-color: #000;
+}
+body > .container, body > #contenu{
+	/*border-left: 4px solid #000;
+	border-right: 4px solid #000;*/
+}
+#contenu{
+	background-color: #fff;
+}
+img, iframe{
+	max-width: 100%;
+}
+h1, h2, h3, h1 a, h2 a, h3 a{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+h4, h5, h6, h4 a, h5 a, h6 a{
+	
+}
+
+body{
+	
+}
+.container > .row{
+	background-color: rgba(253, 231, 171, 0.3); /* #fff */
+}
+.container .container > .row{
+	background-color: transparent;
+}
+#fancybox-content .container > .row{
+	background-color: #fff;
+}
+#fancybox-content .container > .row [id^="logoV"] img,#fancybox-content .container > .row [id^="logoD"] img{
+	height: auto;
+}
+#fancybox-content .container > .row [id^="logoV"],#fancybox-content .container > .row [id^="contentV"],
+#fancybox-content .container > .row [id^="logoD"],#fancybox-content .container > .row [id^="titleD"],#fancybox-content .container > .row [id^="contentD"]{
+	padding-left: 0;
+}
+#fancybox-content .container > .row [id^="contentV"],#fancybox-content .container > .row [id^="contentD"]{
+	padding-right: 0;
+}
+#fancybox-content .container > .row [id^="contentV"] h2{
+	font-size: 1.4em;
+}
+.none{
+	display:none;
+}
+#iframe{
+	margin-top: 15px;
+}
+/*************** BOUTONS ***********/
+
+.btn-rond{
+	background-color: transparent;/* #fff */
+    border-color: #d3141c;
+    color: #d3141c;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+	font-size: 1.4em;
+	transition: 1s ease all;
+}
+.btn-rond span{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: .8em;
+}
+.btn-rond.fa-arrow-up::before{
+	display:block;
+}
+.btn-rond:hover{
+	background-color: #d3141c;
+	color: #fff;
+}
+.share .fa{
+	color: #CF1018;
+}
+/*************** header *************/
+
+.container > header.row{
+	background-color: #cf1018;  /*#BF2A36 #c50000*/
+}
+
+#dday{
+	background-color: #010306;
+	color: #fceaaa;
+	border-radius: 300px;
+	width: 100px;
+	height: 100px;
+	font-size: 1.4em;
+	margin: 6px auto 0 auto;
+	padding: 8px 10px;
+	text-align: center;
+	font-weight: bold;
+	text-transform:uppercase;
+	/*font-family: 'Love Ya Like A Sister', cursive;*/
+	font-family: 'embossing';
+}
+#dday span{
+	color:#fb0000;
+	/*font-family: 'Love Ya Like A Sister', cursive;*/
+	font-family: 'embossing';
+}
+
+.socialbutton ul{
+	list-style:none;
+}
+.socialbutton ul li{
+	float: right;
+	margin-left: 50px;
+	font-size: 2em;
+	line-height: 92px;
+}
+.socialbutton ul li:last-child{
+	margin-left: 0;
+}
+.socialbutton ul li a{
+	color: #fff;
+}
+#menu .container-fluid{
+	padding-left: 5px;
+    padding-right: 5px;
+}
+#menu.navbar{
+	border-radius: 0;
+	min-height: auto;
+	margin-bottom: 0;
+	background-color: #FDE7AB;/*#f6cdd2*/
+	/*border-width: 2px;
+	border-left: none;
+	border-right: none;
+	border-color: #fff;*/
+	border: none;
+}
+#menu.navbar-default .navbar-nav > .active > a, #menu.navbar-default .navbar-nav > .active > a:focus, #menu.navbar-default .navbar-nav > .active > a:hover{
+	background-color: transparent;
+}
+#menu .navbar-nav > li:after{
+	content:" | ";
+	position: relative;
+	bottom: 2px;
+	display:inline-block;
+	font-weight: bold;
+	color: #12181b;
+}
+#menu .navbar-nav > li:last-child:after{
+	content: "";
+}
+#menu .nav > li > a{
+	display:inline-block;
+}
+#menu .navbar-nav > li > a{
+	text-transform: uppercase;
+	padding: 2px 15px;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	/*font-weight: bold;*/
+	color: #12181b;
+	/*border-right: 2px #12181b solid;*/
+	font-family: "axisbold","Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size: 16px;
+}
+#menu .navbar-toggle{
+	background-color: #bf2a36;
+}
+#menu.navbar-default .navbar-toggle .icon-bar{
+	background-color: #ddd;
+}
+#menu .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header{
+	padding:0;
+}
+/**************** GENERAL **************/
+
+#contenu > section{
+	/*border-bottom: 2px solid #fff;*/
+}
+
+/************************ SLIDER ****************/
+
+#slider .carousel-caption{
+	background-color: rgba(207, 16, 24,.2); /* rgb(207, 16, 24) 212,26,27*/
+	bottom: 40%;
+	padding: 15px;
+	right: 0;
+	left:auto;
+	text-align: left;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:18px;
+}
+#slider .carousel-caption a{
+	color:#fff;
+}
+#slider .carousel-caption h3{
+	text-transform: uppercase;
+	margin: 0;
+}
+#slider .carousel-caption p{
+	margin: 0;
+}
+/************************* UNE ******************/
+#une article[class*=col]{
+	padding:0;
+	position: relative;
+}
+
+#une article header{
+	position: absolute;
+	right: 0;
+	bottom: 16px;
+	background-color: rgba(207, 16, 24,.5);
+	padding:3px 12px;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:  #ffffff;
+	font-weight: 400;
+}
+#une article header h1, #une article header h2{
+	font-size: 14px;
+	margin:0;
+	line-height: 20px;
+}
+#une article header h1{
+	text-transform:uppercase;
+}
+
+
+/************************ INFOS *****************/
+
+#infos{
+	background-color: rgb(207, 16, 24); /*#d41a1b*/
+}
+
+/******************** EDITO *********************/
+#edito {
+	color: #fff;
+	text-align: center;
+}
+#edito h1{
+	font-size: 1.3em;
+	text-transform: uppercase;
+}
+#edito h2{
+	font-size: 1.2em;
+	line-height: 2em;
+}
+#button{
+	border-radius: 0;
+	border: none;
+	background-color: rgba(0,0,0,.7);
+	color: #fff;
+	text-transform:uppercase;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/******************** VIDEO *********************/
+#video{
+	padding:0;
+}
+
+/******************** PLUS **********************/
+#plus{
+	background-color: #fff;
+}
+#passport{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:  #1a171b;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+}
+#passport h1{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+#passport h2{
+	font-size: 18px;
+	line-height: 25px;
+}
+#passport a{
+	color:#0a070c;
+}
+#passport a:hover{
+	text-decoration: none;
+}
+#leplus{
+	padding:0;
+	position: relative;
+}
+#leplus header{
+	position: absolute;
+	right: 0;
+	bottom: 16px;
+	background-color: rgba(29, 29, 27,.5);
+	padding:3px 12px;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:  #ffffff;
+	font-weight: 400;
+}
+#leplus a{
+	color:#fff;
+}
+#leplus header h1, #leplus header h2{
+	font-size: 14px;
+	margin:0;
+	line-height: 20px;
+}
+#leplus header h1{
+	text-transform:uppercase;
+}
+/**************** EVENTS ********************/
+.tribe-bar-date-filter{
+	display:none;
+}
+.events, #tribe-events-content{
+	/*background-color: #fff;*/
+}
+.events navbar-nav dd.tribe-event-tags a{
+	padding-bottom: 15px;
+    padding-top: 15px;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    color: #777;
+}
+.events table td#logo img {
+    height: auto;
+    width: 100%;
+}
+.post-type-archive-tribe_events .row.events > div[class^=col]{
+	padding-left: 0;
+	padding-right: 0;
+}
+.post-type-archive-tribe_events .table-striped>tbody>tr:nth-of-type(odd){
+	background-color: transparent;
+}
+.post-type-archive-tribe_events .table>tbody>tr>td,.post-type-archive-tribe_events  .table>tbody>tr>th, .table>tfoot>tr>td, .post-type-archive-tribe_events .table>tfoot>tr>th,.post-type-archive-tribe_events  .table>thead>tr>td, .table>thead>tr>th{
+	border: none;
+}
+.post-type-archive-tribe_events .url{
+	margin-bottom: 15px;
+}
+.post-type-archive-tribe_events .url a{
+	/*font-size: 0;*/
+	text-align: center;
+}
+.post-type-archive-tribe_events .url a, .btn.btn-default,
+.single-tribe_events .url a{
+	font-size: 12px;
+	/*content: "+ d'infos sur le site du lieu";*/
+	text-transform:uppercase;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 400;
+	text-transform:uppercase;
+	background-color: #d31219;
+	margin: 0;
+	padding: 5px 10px;
+	display:inline-block;
+    border: none;
+    border-radius: 0;
+}
+.post-type-archive-tribe_events .url a:hover{
+	text-decoration: none;
+}
+.post-type-archive-tribe_events table[id^=events] h3{
+	margin-top: 0;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.post-type-archive-tribe_events table[id^=events] picture{
+	margin-bottom: 15px;
+}
+.post-type-archive-tribe_events table img:not(.barbars){
+	height: auto;
+	width: 284px;
+}
+.post-type-archive-tribe_events table td[id^=logo] picture, .single-tribe_events #tribe-events-content picture,.single-tribe_events picture#logomobile,.post-type-archive-tribe_events table td picture#logomobile{
+	position: relative;
+	display: block;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{
+	padding: 8px;
+}
+.table > tbody > tr > td:first-child, .table > tbody > tr > th:first-child, .table > tfoot > tr > td:first-child, .table > tfoot > tr > th:first-child, .table > thead > tr > td:first-child, .table > thead > tr > th:first-child{
+	padding-left: 0;
+}
+.table > tbody > tr > td:last-child, .table > tbody > tr > th:last-child, .table > tfoot > tr > td:last-child, .table > tfoot > tr > th:last-child, .table > thead > tr > td:last-child, .table > thead > tr > th:last-child{
+	padding-right: 0;
+}
+.post-type-archive-tribe_events table td[id^=logo] header,
+.single-tribe_events #tribe-events-content #picture header{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(211, 18, 25,.4);
+	color: #fff;
+	width: 100%;
+    margin: 0;
+    padding: 5px;
+    font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.post-type-archive-tribe_events table td[id^=logo] header address,
+.single-tribe_events #tribe-events-content #picture header address{
+	margin-bottom:0;
+}
+.post-type-archive-tribe_events table .date{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.post-type-archive-tribe_events table .date a{
+	color:rgb(211, 18, 25);
+}
+
+.post-type-archive-tribe_events .events-list #tribe-events-footer,.post-type-archive-tribe_events  .single-tribe_events #tribe-events-footer,.post-type-archive-tribe_events  .tribe-events-day #tribe-events-footer,.post-type-archive-tribe_events .tribe-events-map #tribe-events-footer,.post-type-archive-tribe_events .tribe-events-photo #tribe-events-footer{
+	border: none;
+}
+
+.post-type-archive #tribe-events .tribe-events-button,.post-type-archive  #tribe-events .tribe-events-button:hover,.post-type-archive  #tribe_events_filters_wrapper input[type="submit"],.post-type-archive  .tribe-events-button,.post-type-archive  .tribe-events-button.tribe-active:hover,.post-type-archive  .tribe-events-button.tribe-inactive,.post-type-archive  .tribe-events-button:hover,.post-type-archive  .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"],.post-type-archive  .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] > a{
+	background-color: rgba(207, 16, 24,.7);
+}
+
+.post-type-archive table dt,.single-tribe_events #contenu dt{
+	margin: 10px 0 5px;
+	clear: both;
+}
+
+/**** SINGLE ****/
+.single #col_gauche{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/**** SINGLE EVENT ****/
+
+
+
+.single-tribe_events #tribe-events-content .tribe-events-back{
+    margin-top: 15px;
+    border-bottom: 1px solid #d31219;
+}
+.single-tribe_events #tribe-events-content #picture{
+    padding: 0;
+}
+.single-tribe_events #tribe-events-content #picture img{
+    height: auto;
+}
+.single-tribe_events #tribe-events-content #picture header a{
+    color:#fff;
+    text-decoration: underline;
+}
+.single-tribe_events #tribe-events-content article h1{
+    margin-top: 0;
+}
+.single-tribe_events #tribe-events-content #tribe-events-footer{
+    border:none;
+}
+
+.single-tribe_events #contenu dl:after{
+    clear:both;
+    content:"";
+    display: block;
+}
+.single-tribe_events #contenu .tribe-events-event-meta{
+    background-color: transparent;
+    border: none;
+}
+.single-tribe_events #contenu #tribe-events-content{
+    margin-bottom: 0;
+}
+
+
+
+
+.post-type-archive-tribe_events table td[id^=logo] .partenaire,.single-tribe_events #tribe-events-content picture .partenaire,.single-tribe_events picture#logomobile .partenaire, .post-type-archive-tribe_events table td #logomobile .partenaire{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/**************** DISQUAIRES *****************/
+#fancybox-content h1{
+    color:rgb(211,18,25);
+    font-size: 1.5em;
+    margin-top: 0;
+}
+/*MENU*/
+#localisation, #themes{
+	border: none;
+	text-transform:uppercase;
+	color:#1a171b;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin-top: 15px;
+	min-height:0;
+	background-color: transparent;/* #fff */
+}
+.post-type-archive-tribe_events .list-unstyled li a,.single-tribe_events .list-unstyled li a,
+.single-tribe_events #tribe-events-footer .tribe-events-sub-nav li a{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#localisation ul,#themes ul{
+	margin-left: 30px;
+}
+#localisation li:first-child,#themes li:first-child{
+	padding: 0 5px;
+	font-size: 14px;/* Approximation causée par une substitution de police */
+	font-weight: 400;
+	line-height: 20px;
+}
+#localisation li a, .post-type-archive-tribe_events .list-unstyled li a,.single-tribe_events .list-unstyled li a,
+.single-tribe_events #tribe-events-footer .tribe-events-sub-nav li a{
+	color: #d4001b;
+	font-size: 14px;/* Approximation causée par une substitution de police */
+	font-weight: 400;
+	border-right: 2px #1a171b solid;
+	padding: 0 5px;
+}
+.post-type-archive-tribe_events .list-unstyled li a,
+.single-tribe_events .list-unstyled li a,
+.single-tribe_events #tribe-events-footer .tribe-events-sub-nav li a{
+	border: none;
+	padding: 0;
+}
+#localisation li:last-child a, #themes li:last-child a{
+	border:none;
+}
+#localisation li a:hover{
+	text-decoration: underline;
+}
+#themes li a{
+	font-size: 15px;/* Approximation causée par une substitution de police */
+	font-weight: 400;
+	border-right: 2px #d4001b solid;
+	padding: 0 5px;
+	color: #1a171b;
+}
+.post-type-archive-tribe_events #themes{
+	margin-top:0;
+}
+.post-type-archive-tribe_events #localisation{
+	margin-bottom: 0;
+}
+/*disquaires*/
+
+.page-template-page-disquaires section.row article, .page-template-page-vinyles section.row article,
+.page-template #lapresse article,.page-template-page-partenaires section.row article{
+	padding-left: 0;
+	padding-right: 1px;
+	margin-bottom: 1px;
+	position: relative;
+}
+.page-template-page-disquaires section.row article header, .page-template-page-vinyles section.row article header,
+.page-template #lapresse article header,.page-template-page-partenaires section.row article header{
+	position: absolute;
+	bottom: 0;
+    padding-bottom: 15%;
+	left: 0;
+	width: calc(100% - 1px);
+    text-align: center;
+}
+.page-template-page-vinyles section.row article header{
+    background-color: rgba(0,0,0,.7);
+    margin-top: auto;
+    padding-bottom: 0;
+}
+.page-template-page-disquaires section.row > header, .post-type-archive-tribe_events .heading, .page-template-page-vinyles section.row > header,
+.page-template-page-media section.row > header, .page-template-default section.row > header,.page-template-page-partenaires section.row > header{
+	border-bottom: 1px solid #d31219;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.page-template-page-disquaires section.row > header h1, .post-type-archive-tribe_events .heading h2.term-heading, .page-template-page-vinyles section.row > header h1,
+.page-template-page-media section.row > header h1, .page-template-default section.row > header h1,
+.page-template-page-partenaires section.row > header h1{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 23px;
+	font-weight: 400;
+	text-transform:uppercase;
+	background-color: #d31219;
+	margin: 0;
+	padding: 13px 14px 9px 14px;
+	display:inline-block;
+}
+
+.page-template-page-disquaires section.row article header h2, .page-template-page-disquaires section.row article header h3,
+.page-template-page-vinyles section.row article header h2, .page-template-page-vinyles section.row article header h3,
+.page-template #lapresse article header h2, .page-template #lapresse article header h3,
+.page-template-page-partenaires section.row article header h2,.page-template-page-partenaires section.row article header h3{
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 1.1em;
+	font-weight: 400;
+	padding: 5px;
+	margin: 0 0 2px 0;
+	word-wrap:break-word;
+	-o-hyphens: auto;
+	-ms-hyphens: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	display:inline-block;
+	padding: 5px;
+	text-transform:uppercase;
+	max-width: 95%;
+    background-color: rgba(0,0,0,.7);
+}
+.page-template-page-vinyles section.row article header h2#art{
+    background-color: transparent;
+    width: calc(100% - 23px);
+    text-align: center;
+}
+.page-template-page-disquaires section.row article:hover header,
+.page-template-page-vinyles section.row article:hover header,
+.page-template #lapresse article:hover header,
+.page-template-page-partenaires article:hover header{
+	display:block;
+}
+.page-template-page-disquaires section.row article img,
+.page-template-page-vinyles section.row article img,
+.page-template #lapresse article img,
+.page-template-page-partenaires article img{
+	max-width: 100%;
+	height: auto !important;
+}
+.page-template-page-disquaires #plus,
+.page-template #lapresse #plus,.page-template-page-partenaires #plus{
+	position:relative;
+	width:32px;
+	height: 32px;
+	margin: 5px auto 0;
+	background-color: transparent;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.page-template-page-vinyles #plus{
+    position:relative;
+	width:20px;
+	height: 20px;
+	margin: 3px 3px 3px 0;
+	background-color: transparent;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.page-template-page-disquaires #plus1, .page-template-page-vinyles #plus1,
+.page-template #lapresse #plus1,.page-template-page-partenaires #plus1{
+	color:#fff;
+	font-size: 32px;
+}
+.page-template-page-vinyles #plus1{
+    font-size: 20px;
+}
+.page-template-page-disquaires #plus2, .page-template-page-vinyles #plus2,
+.page-template #lapresse #plus2,.page-template-page-partenaires #plus2{
+	position: absolute;
+	color:#d31219;
+	top: 6px;
+    left: 8px;
+    font-size: 21px;
+}
+.page-template-page-vinyles #plus2{
+    top: 4px;
+    left: 3px;
+    font-size: 15px;
+}
+/**************** FOOTER *********************/
+#footer{
+	background-color: #1a171b;
+	font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:  #ffffff;
+	font-size: 14px;/* Approximation causée par une substitution de police */
+	font-weight: 400;
+	text-align: left;
+}
+#footer a{
+	color:#fff;
+}
+#footer a:hover{
+	color:#fff;
+	text-decoration:underline;
+}
+#footer .socialbutton ul li {
+    display: inline-block;
+    float:none;
+}
+#footer .socialbutton ul li:first-child{
+	margin-left: 0;
+}
+.socialbutton ul li:last-child{
+	margin-left: 50px;
+}
+
+#menu-footer{
+	float:none !important;
+	text-align: right;
+}
+#menu-footer li{
+	float:none;
+}
+#menu-footer li a{
+	color:#fff;
+}
+#menu-footer li a:hover{
+	color:#fff;
+	background-color: transparent;
+	text-decoration:underline;
+}
+
+/*********** RESPONSIVE *************/
+
+/************ > 768PX ************/
+@media screen and (min-width: 768px){
+	#day{
+		height: 130px;	/*   163px  */
+	}
+	#socialmedia{
+		margin-top:15px;
+	}
+	#dday{
+		margin-top:15px;
+	}
+	#une article:nth-child(2) img{
+		height: 239px;
+	}
+	#une article:first-child{
+		/*border-right: 1px solid #fff;*/
+	}
+	#une article:last-child{
+		/*border-left: 1px solid #fff;*/
+	}
+	#une article:nth-child(2){
+		/*border-right: 1px solid #fff;
+		border-left: 1px solid #fff;*/
+	}
+}
+
+/************ > 992PX ************/
+@media screen and (min-width: 992px){
+	#day{
+		height: 175px;	/*   163px  */
+	}
+	#socialmedia{
+		margin-top:37px;
+	}
+	#dday{
+		margin-top:37px;
+	}
+	#une article:nth-child(2) img{
+		height: 309px;
+	}
+	#infos article#edito h2{
+		/*border-right: 1px solid #fff;*/
+		font-size: 1.09em;
+	}
+	#infos article:last-child{
+		/*border-left: 2px solid #fff;*/
+	}
+}
+
+/************ > 1200PX ************/
+@media screen and (min-width: 1200px){
+	#day{
+		height: 217px;	/*   163px  */
+	}
+	#socialmedia{
+		margin-top:58px;
+	}
+	#dday{
+		margin-top:58px;
+	}
+	#une article:nth-child(2) img{
+		height: auto;
+	}
+	#infos article#edito h2{
+		font-size: 1.2em;
+	}
+    /****MENU****/
+    .menu-principal-container{
+        width: 100%;
+    }
+    #menu #menu-principal{
+        width: 1005px;
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        padding-right: 0;
+    }
+    .page-template-page-disquaires #localisation ul{
+        width: 875px;
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        padding-right: 0;
+    }
+    .page-template-page-vinyles #localisation ul{
+        width: 728px;
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        padding-right: 0;
+    }
+    .post-type-archive-tribe_events #localisation ul{
+        width: 875px;
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        padding-right: 0;
+    }
+    .page-template-page-media #localisation ul{
+        width: 500px;
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        padding-right: 0;
+    }
+    .page-template-page-partenaires #localisation ul{
+        width: 954px;
+        float: none;
+        margin-left:auto;
+        margin-right: auto;
+        padding-right: 0;
+    }
+    
+}
+/************ < 991PX ************/
+
+@media screen and (max-width: 991px){
+	#infos article, #plus article:first-child{
+		/*border-bottom: 2px solid #fff;*/
+	}
+	#button{
+		margin-bottom: 20px;
+	}
+	#leplus img{
+		height: auto;
+	}
+	table td.col-sm-12{
+		display: block !important;
+	}
+	#localisation li a,#themes li a{
+		border: none;
+	}
+	#localisation ul, #themes ul{
+		margin-left: 0;
+	}
+	#localisation li:first-child, #themes li:first-child,#localisation li a{
+		padding: 0;
+	}
+	#menu .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header{
+		padding-left: 15px;
+    	padding-right: 15px;
+	}
+	.page-template-page-disquaires section.row article header{
+		margin-top: 20%;
+	}
+	.page-template-page-disquaires section.row article{
+		text-align:center;
+	}
+}
+
+/************ < 767PX ************/
+@media screen and (max-width: 767px){
+    body > .container > .row{
+        overflow: hidden;
+    }
+	#menu .navbar-nav > li:after{
+		content: "";
+		display:none;
+	}
+	#button.pull-right{
+		float:none !important;
+		margin-bottom: 20px;
+	}
+	#day{
+		height: 224px;	/*   163px  */
+	}
+	#dday{
+		margin-top:62px;
+	}
+	#une article{
+		/*border-bottom: 2px solid #fff;*/
+	}
+	.post-type-archive-tribe_events table img{
+		width:inherit;
+	}
+    
+    /** SINGLE EVENT **/
+    
+    .single-tribe_events #contenu #tribe-events-content{
+        width: calc(100% + 30px);
+    }
+    .single-tribe_events #contenu .tribe-events-sub-nav li a{
+        font-size: 12px;
+        /*content: "+ d'infos sur le site du lieu";*/
+        text-transform:uppercase;
+        font-family:'axisbold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform:uppercase;
+        background-color: #d31219;
+        margin: 0;
+        padding: 5px 10px;
+        display:inline-block;
+        border: none;
+        border-radius: 0;
+    }
+    .single-tribe_events #contenu .tribe-events-schedule{
+        border:none;
+        background-color: transparent;
+    }
+}
